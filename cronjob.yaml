@@ -1,0 +1,17 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: samplecron
+  labels:
+    jobtype: samplejob
+spec:
+  schedule: "*/20 * * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: samplecron
+            image: venkateshsrini3/croncontr
+            args: ["Scheduler"]
+          restartPolicy: OnFailure

@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/src/k8s.job.spinner.service/bin/Debug/net5.0
+/src/k8s.job.spinner.service/obj
+/src/k8s.job.spinner.service/k8s.job.spinner.service.csproj.user

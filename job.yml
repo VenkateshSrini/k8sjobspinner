@@ -1,0 +1,15 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: samplejob
+  labels:
+    jobtype: samplejob
+spec:
+  ttlSecondsAfterFinished: 1800
+  template:
+    spec:
+      containers:
+      - name: samplejob
+        image: venkateshsrini3/croncontr
+        args: ["Scheduler"]
+      restartPolicy: OnFailure
